@@ -57,50 +57,50 @@ img {
 /* ------------------header--------------------------------- */
 
 
-.header-section {
+.header {
    padding: 24px 0 25px;
    display: flex;
     border-bottom: 1px solid #ECECEC;
+}
+.header .container {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    margin-right: 93px;
 }
 
 .logo {
     display: block;
     font-family: raleway, sans-serif;
-    color: #000000;
+    
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
-
-}
-
-.logo-blue {
     color: var(--secondary-color)
 }
-.header-section .container {
-    display: flex;
-    align-items: center;
+.logo--black {
+    color: #000000;
 }
-.nav-menu__list {
+
+
+.nav-menu {
     display: flex;
-    margin-left: 93px;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
 
 }
-
-
-.nav-menu__list li:not(:last-child) {
-    margin-right: 50px;
-}
-    
-
-
-.nav-menu__list .nav-menu__link.current {
+.nav-menu .nav-menu__link.current {
     color: var(--secondary-color);
 }
 
+.nav-menu__item:not(:last-child) {
+    margin-right: 50px;
+}
+    
 .nav-menu__link {
     display: block;
     color: var(--main-color);
@@ -115,14 +115,17 @@ img {
     display: flex;
     align-items: center;
 }
+.contacts-margin {
+    margin-left: auto;
+}
 
-.header-contacts__list {
+.contacts {
     display: flex;
     align-items: baseline;
 
 }
 
-.header-contacts__item {
+.contacts__item {
         display: block;
         margin-left: 10px;
         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -133,21 +136,18 @@ img {
 
 }
 
-.header-contacts__link {
+.contacts__link {
     color: var(--additional-color)
 }
 
 
-.header-contacts__link:hover,
-.header-contacts__link:focus {
+.contacts__link:hover,
+.contacts__link:focus {
     color: var(--secondary-color);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contacts-margin {
-    margin-left: auto;
-}
-.header-contacts__item:not(:last-child) {
+.contacts__item:not(:last-child) {
     margin-right: 30px;
 }
 
@@ -187,9 +187,7 @@ img {
 .btn {
     padding: 10px 32px;
     display: block;
-    margin: 30px auto 0;
-
-
+    
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-size: 16px;
@@ -201,6 +199,10 @@ img {
     border: none;
     border-radius: 4px;
 
+}
+
+.btn-hero {
+margin: 30px auto 0;
 }
 /* -----------------advantages--------------------- */
 .advantages {
@@ -260,19 +262,19 @@ padding-top: 94px;
     letter-spacing: 0.03em;
     color: var(--main-color);
 }
-.services__list {
+.lower-overlay {
     display: flex;
 }
 
 
-.services__item {
+.lower-overlay__item {
     position: relative;
 }
-.services__item:not(:last-child) {
+.lower-overlay__item:not(:last-child) {
     margin-right: 30px;
 }
 
-.services__label {
+.lower-overlay__label {
     position: absolute;
     display: inline-block;
     font-size: 14px;
@@ -341,12 +343,15 @@ background-color: #F5F4FA;
     letter-spacing: 0.03em;
     color: var(--additional-color);
 }
-.soc-icon__list {
+.soc-icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 16px;
+    
    
+}
+.soc-icon__item--team {
+    margin-top: 16px;
 }
 
 .soc-icon__item {
@@ -354,7 +359,7 @@ width: 44px;
 height: 44px;
 
 }
-.soc-icon__item:not(:last-child) {
+.soc-icon__item--team:not(:last-child) {
     margin-right: 10px;
 }
 
@@ -438,23 +443,14 @@ border-color: var(--secondary-color);
 
 }
 
-.logo-white {
-    font-family: raleway, sans-serif;
+.logo--light {
     color: #fff;
-
-}
-
-.logo-footer {
-    font-family: raleway, sans-serif;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
 }
 
 .footer .container {
     display: flex;
 }
-.footer-contact__list {
+.footer-contact {
     list-style: none;
     max-width: 231px;
 }
@@ -490,31 +486,15 @@ border-color: var(--secondary-color);
     color: #FFFFFF;
     font-style: normal;
 }
-.footer-soc__list {
-    display: flex;
-}
-.footer-soc__link {
-    display: block;
-    width: 44px;
-    height: 44px;
-    padding: 12px;
-    border-radius: 50%;
+
+.soc-icon__link--footer{
     background-color: rgba(255, 255, 255, 0.1);
-
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.footer-soc__link:hover,
-.footer-soc__link:focus {
-background-color: var(--secondary-color);
 }
 
-.footer-soc__link svg {
+.soc-icon__link--footer svg {
     fill: #fff;
 }
-.footer-soc__item {
-
-}
-.footer-soc__item:not(:last-child) {
+.soc-icon__item--footer:not(:last-child) {
     margin-right: 10px;
 }
 
@@ -547,23 +527,14 @@ background-color: var(--secondary-color);
     
         
 }
-.footer-form__btn {
+.btn-footer {
     position: relative;
     width: 200px;
     padding: 10px 62px 10px 28px;
     margin-left: 12px;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.87;
-    letter-spacing: 0.06em;
-    color: rgba(255, 255, 255, 0.6);
-    background-color: var(--secondary-color);
-    color: #fff;
     display: flex;
     align-items: center;
-    cursor: pointer;
-    border: none;
-    border-radius: 4px;
+ 
 }
 .footer-form__icon {
     position: absolute;
@@ -622,11 +593,11 @@ background-color: var(--secondary-color);
 
 }
 .close-btn:hover,
-.close-btn:focus > .close-icon{
+.close-btn:focus > .close-btn__icon{
     fill: var(--secondary-color);
     
 }
-.close-icon {
+.close-btn__icon {
     
 }
 
@@ -842,21 +813,21 @@ background-color: var(--secondary-color);
     margin-bottom: 50px;
 }
 
-.filter-item {
+.filter-list__item {
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.filter-item:not(:last-child) {
+.filter-list__item:not(:last-child) {
     margin-right: 8px;
     
 }
-.portfolio-list {
+.overlay-cards {
     display: flex;
     flex-wrap: wrap;
         margin-left: -30px;
         margin-bottom: -30px;
 }
-.portfolio-item {
+.overlay-cards__item {
     position: relative;
     margin-left: 30px;
     margin-bottom: 30px;
@@ -874,23 +845,23 @@ background-color: var(--secondary-color);
     padding: 20px 24px;
     
 }
-.portfolio-item:hover,
-.portfolio-item:focus   {
+.overlay-cards__item:hover,
+.overlay-cards__item:focus   {
     
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.portfolio-item:hover .portfolio-overtext {
+.overlay-cards__item:hover .overlay-cards__label {
     transform: translateY(0);
 }
 .filter-item:hover,
 .filter-item:focus {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.portfolio-thumb {
+.overlay-cards-thumb {
     position: relative;
     overflow: hidden;
 }
-.portfolio-overtext {
+.overlay-cards__label {
     position: absolute;
     top: 0;
     height: 100%;
