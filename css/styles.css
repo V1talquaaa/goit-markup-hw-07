@@ -54,6 +54,17 @@ img {
     display: block;
 }
 
+
+
+
+.title {
+    text-align: center;
+    font-size: 36px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    color: var(--main-color);
+}
+
 /* ------------------header--------------------------------- */
 
 
@@ -256,11 +267,7 @@ padding-top: 94px;
 
 .services__title {
     margin-bottom: 50px;
-    text-align: center;
-    font-size: 36px;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
-    color: var(--main-color);
+ 
 }
 .lower-overlay {
     display: flex;
@@ -302,12 +309,6 @@ background-color: #F5F4FA;
 }
 .team__title {
     margin-bottom: 50px;
-    text-align: center;
-
-    font-size: 36px;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
-    color: var(--main-color);
 }
 
 .team__list {
@@ -392,13 +393,8 @@ height: 44px;
 }
 .clients__title {
         margin-bottom: 50px;
-        text-align: center;
-        
-        font-size: 36px;
-        line-height: 1.17;
-        letter-spacing: 0.03em;
-        color: var(--main-color);
 }
+
 .clients__list {
     display: flex;
     justify-content: center;
