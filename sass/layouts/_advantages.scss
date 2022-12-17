@@ -10,31 +10,24 @@
 }
 
 &__icon-wrap {
-    display: flex;
+    @extend %centeredFlex;
     width: 270px;
     height: 120px;
     background-color: #F5F4FA;
-    align-items: center;
-    justify-content: center;
+
     margin-bottom: 30px;
 }
 
 &__title {
     padding-bottom: 10px;
-
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
+    @include font(14, null, 1.14, 0.03);
     text-transform: uppercase;
     color: var(--main-color);
 }
 
 &__label {
     max-width: 270px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
+    @include font(14, 400, 1.71, 0.03)
     color: var(--additional-color);
 }
 }
